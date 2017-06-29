@@ -1,0 +1,17 @@
+
+<%= link_to("<< Back to List", employees_path, :class => 'back-link') %>
+
+<div class="employees new">
+  <h2>Create Employee</h2>
+
+  <%= form_for(@employee) do |f| %>
+
+    <%= render(:partial => 'form', :locals => {:f => f}) %>
+
+
+    <div class="form-buttons">
+      <%= f.submit("Update Employee") %>
+    </div>
+
+  <% end %>
+</div>

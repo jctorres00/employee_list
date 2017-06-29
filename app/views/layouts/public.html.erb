@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>Employee Management Home %></title>
+      <%= stylesheet_link_tag('application', :media => 'all') %>
+   </head>
+  <body>
+
+      <div id="header">
+          <h1>Management Area</h1>
+      </div>
+
+
+      <div id="main">
+
+          <div id="navigation">
+             <%= render(:partial => 'layouts/navigation', :locals => { :departments => @departments} ) %>
+          </div>
+
+
+          <div id="content">
+            <%= yield %>
+          </div>
+
+          <div class="clear"></div>
+
+      </div>
+
+      <div id="footer">
+          <p id="copyright">&copy; jctorres</p>
+      </div>
+
+
+  </body>
+</html>

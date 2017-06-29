@@ -1,0 +1,23 @@
+<table summary="Employee form fields">
+  <tr>
+    <th>Last Name</th>
+    <td><%= f.text_field(:last_name) %></td>
+  </tr>
+  <tr>
+    <th>First Name</th>
+    <td><%= f.text_field(:first_name) %></td>
+  </tr>
+  <tr>
+    <th>Job Tittle</th>
+    <td><%= f.text_field(:jod_tittle) %></td>
+  </tr>
+  <tr>
+    <th>Email</th>
+    <td><%= f.text_field(:email) %></td>
+  </tr>
+  <tr>
+    <th>Department ID</th>
+    <td><%= f.select(:department_id, @departments.map {|d| [d.name, d.id]}) %></td>
+  </tr>
+
+</table>

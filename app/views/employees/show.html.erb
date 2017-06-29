@@ -1,0 +1,38 @@
+
+<%= link_to("<< Back to List", employees_path, :class => 'back-link') %>
+
+<div class="employees show">
+  <h2>Show Employee</h2>
+
+  <table summary="Employee detail view">
+    <tr>
+      <th>Id</th>
+      <td><%= @employee.id %></td>
+    </tr>
+    <tr>
+      <th>Last Name</th>
+      <td><%= @employee.last_name %></td>
+    </tr>
+    <tr>
+      <th>First Name</th>
+      <td><%= @employee.first_name %></td>
+    </tr>
+    <tr>
+      <th>Job Tittle</th>
+      <td><%= @employee.jod_tittle %></td>
+    </tr>
+    <tr>
+      <th>Email</th>
+      <td><%= @employee.email %></td>
+    </tr>
+    <tr>
+      <th>Created</th>
+      <td><%= @employee.created_at %></td>
+    </tr>
+    <tr>
+      <th>Updated</th>
+      <td><%= @employee.updated_at %></td>
+    </tr>
+  </table>
+
+</div>

@@ -1,0 +1,29 @@
+<% @department.each do |department| %>
+ <div class="section">
+   <h1><%= department.name %></h1>
+  </div>
+<% end %>
+
+<h3>Employees</h3>
+
+<div class="employees show">
+  <table align="center" class="listing" summary="Employee list">
+    <tr class="header">
+      <th>Id</th>
+      <th>Last Name</th>
+      <th>First Name</th>
+      <th>Job Tittle</th>
+      <th>Email</th>
+    </tr>
+    <% @employee.each do |employee| %>
+    <tr>
+      <td><%= employee.id %></td>
+      <td><%= employee.last_name %></td>
+      <td><%= employee.first_name %></td>
+      <td><%= employee.jod_tittle %></td>
+      <td><%= employee.email %></td>
+
+    </tr>
+    <% end %>
+  </table>
+</div>

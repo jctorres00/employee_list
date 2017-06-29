@@ -1,0 +1,24 @@
+
+<ul>
+  <br/>
+<li><%= link_to_unless_current("Home",root_path) %></li>
+
+
+<br/>
+<hr>
+<br/>
+<li><%= link_to_unless_current("Manage Departments",departments_path) %></li>
+<li><%= link_to_unless_current("Manage Employees",employees_path) %></li>
+
+<br/>
+<hr>
+<li><h2> Departments </h2></li>
+  <% departments ||= [] %>
+  <ul>
+
+      <% departments.each do |department| %>
+        <li><%= link_to_unless_current(department.name, public_show_path(department.id)) %></li>
+      <% end %>
+
+  </ul>
+</ul>
